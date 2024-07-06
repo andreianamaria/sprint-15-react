@@ -94,10 +94,24 @@ function App() {
     ]);
   };
 
+  const handleDelete = (event) => {
+    const cardWrapperEl = event.target.parentNode
+      ? event.target.parentNode.parentNode
+      : null;
+    if (cardWrapperEl) {
+      const taskIdEl = cardWrapperEl.querySelector(".task-id");
+      if (taskIdEl) {
+        const taskId = taskIdEl.textContent;
+        const newTasks = formData.filter((task) => task.id !== taskId);
+        setFormData(newTasks);
+      }
+    }
+  };
+
   return (
     <div className="app-container">
       <Form onSubmit={handleSubmit} />
-      <TaskViewer cards={formData} />
+      <TaskViewer cards={formData} onClick={handleDelete} />
     </div>
   );
 }
