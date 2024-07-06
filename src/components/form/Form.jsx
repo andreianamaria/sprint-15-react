@@ -1,35 +1,11 @@
 import { useState } from "react";
 import "./Form.css";
 
-const Form = ({ cards }) => {
-  const initialCards = cards;
-
-  const [formData, setFormData] = useState(cards);
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const newTask = {
-      id: event.target.id.value,
-      name: event.target.name.value,
-      status: event.target.status.value,
-      dueDate: new Date(event.target.dueDate.value),
-    };
-    setFormData([
-      ...formData,
-      {
-        id: event.target.id.value,
-        name: event.target.name.value,
-        status: event.target.status.value,
-        dueDate: new Date(event.target.dueDate.value),
-      },
-    ]);
-    console.log(formData);
-  };
-
+const Form = ({ onSubmit }) => {
   return (
     <div className="form-wrapper">
       <p>Add a new task</p>
-      <form className="add-form" onSubmit={handleSubmit}>
+      <form className="add-form" onSubmit={onSubmit}>
         <label htmlFor="id">Task Id:</label>
         <input
           type="text"

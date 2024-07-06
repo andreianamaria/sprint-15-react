@@ -13,7 +13,7 @@ function TaskCard(props) {
         <p>{props.name}</p>
       </div>
       <div className="card-footer">
-        <DateContainer date={props.dueDate} />
+        <DateContainer date={new Date(props.dueDate)} />
       </div>
     </div>
   );
