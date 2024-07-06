@@ -25,10 +25,10 @@ const Form = ({ onSubmit }) => {
 
         <label htmlFor="status">Task Status:</label>
         <select name="status" defaultValue="">
-          <option value="todo">To do</option>
-          <option value="in_progress">In progress</option>
-          <option value="completed">Completed</option>
-          <option value="done">Done</option>
+          <option value="To do">To do</option>
+          <option value="In Progress">In progress</option>
+          <option value="Completed">Completed</option>
+          <option value="Done">Done</option>
         </select>
 
         <label htmlFor="dueDate">Task Due Date:</label>
