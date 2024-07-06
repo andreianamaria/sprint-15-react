@@ -1,0 +1,22 @@
+.task-viewer-container {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+}
+
+.task-wrapper {
+  background-color: #f3f3fb;
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  padding: 50px;
+  min-height: fit-content;
+  max-width: 90%;
+}
+
+h1 {
+  font-weight: 400;
+  margin-left: 5rem;
+  margin-bottom: 50px;
+}
